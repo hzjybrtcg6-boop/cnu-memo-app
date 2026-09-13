@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f8f6f1" />
-  <title>나의 메모장</title>
+  <title>나만의 일기장</title>
   <style>
     :root{--ink:#252522;--muted:#797870;--line:#dedbd2;--paper:#f8f6f1;--card:#fff;--accent:#2d6655;--accent2:#e8f0ec;--danger:#a04343;--shadow:0 12px 35px rgba(44,40,30,.08)}
     *{box-sizing:border-box} body{margin:0;font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink)}
@@ -23,14 +23,14 @@
 <body>
   <section id="login" class="login">
     <form id="loginForm" class="login-card">
-      <div class="mark">✎</div><h1>나의 메모장</h1><p class="sub">언제 톴디서든 떠오르는 생각을<br>안전하게 기록하세요.</p>
+      <div class="mark">✎</div><h1>나만의 일기장</h1><p class="sub">나의 일상을 오랫동안 기억할 수 있도록</p>
       <div class="field"><label for="password">접속 비밀번호</label><div class="password-wrap"><input id="password" type="password" autocomplete="current-password" placeholder="비밀번호를 입력하세요" required><button type="button" class="eye" id="eye" aria-label="비밀번호 표시">◉</button></div></div>
       <button class="primary" id="loginButton">메모장 열기</button><p class="error" id="loginError"></p>
     </form>
   </section>
   <section id="app" class="app hidden">
-    <header class="mobile-head"><button id="menu">☰</button><b>나의 메모장</b></header>
-    <aside id="sidebar" class="sidebar"><div class="brand"><span class="mark">✎</span>나의 메모장</div><button class="new" id="newNote">＋ 새 메모</button><div class="search"><input id="search" placeholder="메모 검색"></div><div id="noteList" class="note-list"></div><div class="sidebar-foot"><button id="logout" class="logout">↪ 로그아웃</button></div></aside>
+    <header class="mobile-head"><button id="menu">☰</button><b>나만의 일기장</b></header>
+    <aside id="sidebar" class="sidebar"><div class="brand"><span class="mark">✎</span>나만의 일기장</div><button class="new" id="newNote">＋ 새 메모</button><div class="search"><input id="search" placeholder="메모 검색"></div><div id="noteList" class="note-list"></div><div class="sidebar-foot"><button id="logout" class="logout">↪ 로그아웃</button></div></aside>
     <main class="main"><div id="empty" class="empty"><div><span style="font-size:40px">✎</span><b>첫 메모를 남겨보세요</b><span>왼쪽의 ‘새 메모’ 버튼을 눌러 시작할 수 있어요.</span></div></div><div id="editor" class="editor hidden"><div class="toolbar"><span id="status" class="status">저장됨</span><button id="pin" class="icon-btn">☆ 고정</button><button id="delete" class="icon-btn delete">삭제</button></div><input id="title" class="title" maxlength="100" placeholder="제목 없음"><textarea id="content" class="content" placeholder="자유롭게 기록해보세요..."></textarea></div></main>
   </section><div id="toast" class="toast"></div>
 <script>
